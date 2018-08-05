@@ -17,12 +17,29 @@ int main(int argc, char*argv[])
 		//inpust = std::string(argv[3]);
 
 	int rows = 4, cols = 4;
-	//std::string input = "0,1 0,2;0,0 1,0;0,1 1,1;0,2 1,2;1,0 1,1;1,1 1,2;1,1 2,1;1,2 2,2;2,0 2,1";
-	std::string input = "0,1 1,0";
+	std::string input = "0,1 0,2;0,0 1,0;0,1 1,1;0,2 1,2;1,0 1,1;1,1 1,2;1,1 2,1;1,2 2,2;2,0 2,1";
+	//std::string input = "0,1 1,0";
+
+	//input = "";
+	//std::cin >> rows >> cols;
+	//std::string tmp;
+	//while (std::cin >> tmp)
+	//{
+	//	if (input == "")
+	//		input += tmp;
+	//	else 
+	//		input += " " + tmp;
+	//}
+
+
+
 
 	auto render = RenderFactory::getRender();
 	std::string maze = render->doRender(rows, cols, input);
 	std::cout << maze << std::endl;
+
+
+
 
 	return 0;
 }

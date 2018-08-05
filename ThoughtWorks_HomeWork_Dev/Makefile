@@ -1,11 +1,12 @@
 CXX=g++
 CFLAGS=-g -w -std=c++11
 target=RenderDemo
+src=$(wildcard *.h)
 all:$(target)
 
-$(target):RenderDemo.o
+$(target):RenderDemo.o 
 	$(CXX) $(CFLAGS) -o RenderDemo RenderDemo.o 
-RenderDemo.o:RenderDemo.cpp
+RenderDemo.o:RenderDemo.cpp $(src)
 	$(CXX) $(CFLAGS) RenderDemo.cpp -c
 
 .PHONY:clean tags
