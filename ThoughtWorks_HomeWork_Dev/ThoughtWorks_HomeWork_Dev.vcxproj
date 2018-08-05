@@ -146,6 +146,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CharSet.h" />
+    <ClInclude Include="CLibsImpl.h" />
+    <ClInclude Include="InputCheck.h" />
+    <ClInclude Include="InputCheckFactory.h" />
+    <ClInclude Include="InputCheckImpl.h" />
+    <ClInclude Include="OutputFormat.h" />
+    <ClInclude Include="OutputFormatFactory.h" />
+    <ClInclude Include="OutputFormatImpl.h" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="RenderFactory.h" />
+    <ClInclude Include="RenderImpl.h" />
+    <ClInclude Include="StrAlgo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RenderDemo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

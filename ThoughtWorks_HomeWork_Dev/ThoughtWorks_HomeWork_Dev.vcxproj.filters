@@ -13,5 +13,68 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Impl">
+      <UniqueIdentifier>{d5524b2e-2f70-46d5-98d4-e1e2c9471f46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Factory">
+      <UniqueIdentifier>{0faf0e20-af0f-417b-b4d9-462bc22fee5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Interface">
+      <UniqueIdentifier>{1b118ffa-9bd4-4072-975d-011fa9642b9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Utils">
+      <UniqueIdentifier>{604b2b0b-e0c6-4d42-aed3-2a4a487f22f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CLibsImpl.h">
+      <Filter>源文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputFormatImpl.h">
+      <Filter>源文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderImpl.h">
+      <Filter>源文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="InputCheckImpl.h">
+      <Filter>源文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="InputCheckFactory.h">
+      <Filter>源文件\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputFormatFactory.h">
+      <Filter>源文件\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderFactory.h">
+      <Filter>源文件\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputFormat.h">
+      <Filter>源文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="InputCheck.h">
+      <Filter>源文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
+      <Filter>源文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CharSet.h">
+      <Filter>源文件\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="StrAlgo.h">
+      <Filter>源文件\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RenderDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
