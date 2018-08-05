@@ -8,7 +8,7 @@
 class RenderImpl :public Render
 {
 public:
-	std::string doRender(int rows, int cols, const std::string& command) override
+	std::string doRender(int rows, int cols, std::string& command) override
 	{
 		auto checker = InputCheckFactory::getInputChecker();
 		checker->checkFormatAndExitIfNotValid(command);

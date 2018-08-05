@@ -18,7 +18,7 @@ int main(int argc, char*argv[])
 
 	int rows = 4, cols = 4;
 	//std::string input = "0,1 0,2;0,0 1,0;0,1 1,1;0,2 1,2;1,0 1,1;1,1 1,2;1,1 2,1;1,2 2,2;2,0 2,1";
-	std::string input = "0,1 0,2";
+	std::string input = "0,1 1,0";
 
 	auto render = RenderFactory::getRender();
 	std::string maze = render->doRender(rows, cols, input);

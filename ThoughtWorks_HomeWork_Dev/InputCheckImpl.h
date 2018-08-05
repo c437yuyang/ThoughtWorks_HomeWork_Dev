@@ -7,7 +7,7 @@
 class InputCheckImpl :public InputCheck
 {
 public:
-	void checkFormatAndExitIfNotValid(std::string str) override
+	void checkFormatAndExitIfNotValid(std::string& str) override
 	{
 		if (str == "")
 			return;
