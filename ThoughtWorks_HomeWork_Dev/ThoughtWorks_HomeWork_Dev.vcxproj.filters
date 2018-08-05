@@ -63,6 +63,9 @@
     <ClInclude Include="StrAlgo.h">
       <Filter>源文件\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="CellType.h">
+      <Filter>源文件\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile">

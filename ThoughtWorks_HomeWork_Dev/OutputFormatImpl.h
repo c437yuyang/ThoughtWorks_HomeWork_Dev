@@ -3,6 +3,7 @@
 #include <vector>
 #include "OutputFormat.h"
 #include "CharSet.h"
+#include "CellType.h"
 class OutputFormatImpl :public OutputFormat
 {
 	std::string output(const std::vector<std::vector<int>>& mat) override
@@ -15,7 +16,8 @@ class OutputFormatImpl :public OutputFormat
 			for (int j = 0; j < n; ++j)
 			{
 				res += '[';
-				res += mat[i][j] == 0 ? CharSet::WALL : (mat[i][j] == 1 ? CharSet::ROAD : CharSet::ROTOBPOS);
+				res += mat[i][j] == CellType::WALL ? CharSet::WALL : 
+					(mat[i][j] == CellType::ROAD ? CharSet::ROAD : CharSet::ROTOBPOS);
 				res += ']';
 				if (j != n - 1)
 					res += ' ';
