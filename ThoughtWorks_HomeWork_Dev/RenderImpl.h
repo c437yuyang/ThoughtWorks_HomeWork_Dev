@@ -8,15 +8,15 @@
 class RenderImpl :public Render
 {
 public:
-	std::string doRender(int rows, int cols, std::string& command) override
+	std::string doRender(int rows, int cols, std::string& command, std::string&initPos) override
 	{
 		auto checker = InputCheckFactory::getInputChecker();
 		checker->checkFormatAndExitIfNotValid(command);
 
 		std::vector<std::vector<int>> mat(rows * 2 + 1, std::vector<int>(cols * 2 + 1, 0));
 		initMat(mat, rows, cols);
-        if(command == "")
-            return OutputFormatFactory::getFormatter()->output(mat);
+		if (command == "")
+			return OutputFormatFactory::getFormatter()->output(mat);
 		std::vector<std::string> joints = yxp_utility::StrAlgo::split(command, ';');
 		for (int i = 0; i < joints.size(); ++i)
 		{
@@ -25,6 +25,9 @@ public:
 			checker->checkInputAndExitIfNotValid(row1, col1, row2, col2, rows, cols);
 			connectJoints(mat, row1, col1, row2, col2);
 		}
+		setRobotPos(mat, initPos);
+
+
 		return OutputFormatFactory::getFormatter()->output(mat);
 	}
 private:
@@ -46,7 +49,7 @@ private:
 		row2 = yxp_utility::atoi(pt[0].c_str());
 		col2 = yxp_utility::atoi((pt[1]).c_str());
 	}
-	
+
 	void connectJoints(std::vector<std::vector<int>> &mat, int row1, int col1, int row2, int col2)
 	{
 		if (row1 == row2 && col1 == col2)
@@ -62,5 +65,19 @@ private:
 			mat[minrow * 2 + 2][col1 * 2 + 1] = 1;
 		}
 	}
+
+	void setRobotPos(std::vector<std::vector<int>> &mat, std::string&initPos)
+	{
+		if (initPos == "")
+			return;
+		auto pt = yxp_utility::StrAlgo::split(initPos, ' ');
+		
+		int row = yxp_utility::atoi(std::string(pt[0]).c_str());
+		int col = yxp_utility::atoi(std::string(pt[1]).c_str());
+		mat[row * 2 + 1][col * 2 + 1] = 2;
+	}
+
+	//void moveRobot(std::vector<std::vector<int>> &mat, std::string&)
+
 };
 

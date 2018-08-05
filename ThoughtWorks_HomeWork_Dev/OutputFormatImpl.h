@@ -15,7 +15,7 @@ class OutputFormatImpl :public OutputFormat
 			for (int j = 0; j < n; ++j)
 			{
 				res += '[';
-				res += mat[i][j] == 0 ? CharSet::WALL : CharSet::ROAD;
+				res += mat[i][j] == 0 ? CharSet::WALL : (mat[i][j] == 1 ? CharSet::ROAD : CharSet::ROTOBPOS);
 				res += ']';
 				if (j != n - 1)
 					res += ' ';
