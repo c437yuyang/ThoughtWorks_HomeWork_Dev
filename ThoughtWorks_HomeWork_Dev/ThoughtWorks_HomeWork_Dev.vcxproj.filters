@@ -73,7 +73,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RenderDemo.cpp">
+    <ClCompile Include="RenderDemo_VS.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

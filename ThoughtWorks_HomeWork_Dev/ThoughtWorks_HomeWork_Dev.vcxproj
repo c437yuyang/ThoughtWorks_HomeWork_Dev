@@ -164,7 +164,7 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RenderDemo.cpp" />
+    <ClCompile Include="RenderDemo_VS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
