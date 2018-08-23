@@ -5,9 +5,9 @@
 class InputCheckFactory
 {
 public:
-	static std::unique_ptr<InputCheck> getInputChecker()
+	static auto getInputChecker()
 	{
-		//return std::make_unique<InputCheckImpl>();//need C++14
-		return std::unique_ptr<InputCheckImpl>(new InputCheckImpl);
+		//return std::make_shared<InputCheckImpl>();//need C++14
+		return std::shared_ptr<InputCheckImpl>(new InputCheckImpl);
 	}
 };

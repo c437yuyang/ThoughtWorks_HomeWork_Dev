@@ -6,6 +6,7 @@
 #include "CellType.h"
 class OutputFormatImpl :public OutputFormat
 {
+public:
 	std::string output(const std::vector<std::vector<int>>& mat) override
 	{
 		int m = mat.size();

@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <stdexcept>
+#pragma warning(disable: 4018)
 namespace yxp_utility
 {
 class StrAlgo
@@ -276,7 +277,7 @@ bool StrAlgo::isPalindrome(const std::string& str)
     return str == std::string(str.rbegin(), str.rend());
 }
 
-std::string longestPalindrome(const std::string&str)
+std::string StrAlgo::longestPalindrome(const std::string&str)
 {
 	if (str.length() == 0)
 		return "";

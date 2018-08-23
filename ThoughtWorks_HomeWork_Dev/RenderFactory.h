@@ -4,9 +4,9 @@
 class RenderFactory
 {
 public:
-	static std::unique_ptr<Render> getRender()
+	static auto getRender()
 	{
-		//return std::make_unique<RenderImpl>();//need C++14
-		return std::unique_ptr<RenderImpl>(new RenderImpl);
+		//return std::make_shared<RenderImpl>();//need C++14
+		return std::shared_ptr<RenderImpl>(new RenderImpl);
 	}
 };

@@ -5,9 +5,9 @@
 class OutputFormatFactory
 {
 public:
-	static std::unique_ptr<OutputFormat> getFormatter()
+	static auto getFormatter()
 	{
-		//return std::make_unique<OutputFormatImpl>(); //need C++14
-		return std::unique_ptr<OutputFormatImpl>(new OutputFormatImpl);
+		return std::make_shared<OutputFormatImpl>(); //need C++14
+		return std::shared_ptr<OutputFormatImpl>(new OutputFormatImpl);
 	}
 };

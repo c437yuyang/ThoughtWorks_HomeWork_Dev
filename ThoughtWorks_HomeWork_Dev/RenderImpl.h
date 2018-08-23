@@ -6,6 +6,7 @@
 #include "StrAlgo.h"
 #include "CLibsImpl.h"
 #include "CellType.h"
+#pragma warning(disable: 4018)
 class RenderImpl :public Render
 {
 public:
