@@ -7,7 +7,7 @@ class OutputFormatFactory
 public:
 	static auto getFormatter()
 	{
-		return std::make_shared<OutputFormatImpl>(); //need C++14
+		//return std::make_shared<OutputFormatImpl>(); //need C++14
 		return std::shared_ptr<OutputFormatImpl>(new OutputFormatImpl);
 	}
 };
